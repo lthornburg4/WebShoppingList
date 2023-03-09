@@ -49,7 +49,7 @@ public class editItemServlet extends HttpServlet {
 		
 		dao.updateItem(itemToUpdate);
 		
-		getServletContext().getRequestDispatcher("/ViewAllItemsServlet").forward(request, response);
+		getServletContext().getRequestDispatcher("/viewAllItemsServlet").forward(request, response);
 	}
 
 }
