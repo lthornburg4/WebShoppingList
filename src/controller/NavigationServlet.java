@@ -53,7 +53,14 @@ public class NavigationServlet extends HttpServlet {
 			dao.deleteItem(itemToDelete);
 			}catch (NumberFormatException e) {
 				System.out.println("Forgot to select an item");	
-		}else if(act.equals("edit")) {
+		}else if(act.equals("edit")) 
+			try {
+			Integer tempId=Integer.parseInt(request.getParameter("id"));
+			ListItem itemToEdit = dao.searchForItemById(tempId);
+			request.setAttribute("itemToEdit", itemToEdit);
+			path="/edit-item.jsp";
+			}catch (NumberFormatException e) {
+				System.out.println("Forgot to select an item");
 			
 		}else if(act.equals("add")) {
 			path="/index.html";

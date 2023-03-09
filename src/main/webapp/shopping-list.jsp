@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form method="post" action="navigationServlet">
+	<form method="post" action="NavigationServlet">
 	<table>
 		<c:forEach items="${requestScope.allItems}" var="currentitem">
 		<tr>
