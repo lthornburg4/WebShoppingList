@@ -13,7 +13,7 @@ import model.ListItem;
 /**
  * Servlet implementation class NavigationServlet
  */
-@WebServlet("/navigationServlet")
+@WebServlet("/NavigationServlet")
 public class NavigationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
