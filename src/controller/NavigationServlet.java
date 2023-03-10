@@ -13,7 +13,7 @@ import model.ListItem;
 /**
  * Servlet implementation class NavigationServlet
  */
-@WebServlet("/navigationServlet")
+@WebServlet("/NavigationServlet")
 public class NavigationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -41,7 +41,7 @@ public class NavigationServlet extends HttpServlet {
 		
 		//after all changes, we should redirect to the viewAllItems servlet
 		//The only time we don't is if they select to add a new item or edit
-		String path="/viewAllItemsServlet";
+		String path="/ViewAllItemsServlet";
 		
 		ListItemHelper dao= new ListItemHelper();
 		String act= request.getParameter("doThisToItem");
